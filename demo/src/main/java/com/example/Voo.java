@@ -2,7 +2,7 @@ package com.example;
 
 public class Voo {
 
-    public Voo(int numero, String horarioPartida, String horarioChegada, String data, int codigoCompanhia,Companhia companhia) {
+    public Voo(int numero, String horarioPartida, String horarioChegada, String data, Companhia companhia) {
         this.companhia = companhia;
         this.numero = numero;
         this.horarioPartida = horarioPartida;
