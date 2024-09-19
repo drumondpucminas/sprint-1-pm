@@ -2,17 +2,22 @@ package com.example;
 
 public class Voo {
 
-    public Voo(int numero, String horarioPartida, String horarioChegada, String data) {
+    public Voo(int numero, String horarioPartida, String horarioChegada, String data, int codigoCompanhia,Companhia companhia) {
+        this.companhia = companhia;
         this.numero = numero;
         this.horarioPartida = horarioPartida;
         this.horarioChegada = horarioChegada;
         this.data = data;
     }
-    
+    public Companhia companhia;
     private int numero;
     private String horarioPartida;
     private String horarioChegada;
     private String data;
+
+    public Companhia getCompanhiaByVoo() {
+        return this.companhia;
+    }
 
     public int getNumero() {
         return this.numero;
