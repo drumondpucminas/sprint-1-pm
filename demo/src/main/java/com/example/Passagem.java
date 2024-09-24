@@ -146,6 +146,19 @@ public class Passagem {
         return remuneracao;
     }
 
+    public void comprarPassagem(Cliente cliente, String classePassagem) {
+        double valorTotal = calcularValorTotal();
+        
+        double remuneracao = calcularRemuneracaoAgencia(classePassagem);
+        
+        System.out.println("Compra de passagem realizada com sucesso para: " + cliente.getUsername());
+        System.out.println("Classe da passagem: " + classePassagem);
+        System.out.println("Valor total: " + valorTotal + " " + moeda);
+        System.out.println("Remuneração da agência: " + remuneracao + " " + moeda);
+
+        cliente.adicionarPassagemComprada(this);
+    }
+
     public void emitirBilhete(Cliente cliente, String documento) {
         if(moeda.equalsIgnoreCase("$") && moeda.equalsIgnoreCase("€")) {
             System.out.println("Bilhete emitido para : " + cliente.getUsername() + " com o Passaporte :  " + documento);
